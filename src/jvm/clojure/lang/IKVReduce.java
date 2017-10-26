@@ -12,6 +12,6 @@
 
 package clojure.lang;
 
-public interface IKVReduce{
-Object kvreduce(IFn f, Object init);
+public interface IKVReduce {
+    Object kvreduce(IFn f, Object init);
 }

@@ -53,8 +53,7 @@ public abstract class FieldVisitor {
     /**
      * Constructs a new {@link FieldVisitor}.
      *
-     * @param api
-     *            the ASM API version implemented by this visitor. Must be one
+     * @param api the ASM API version implemented by this visitor. Must be one
      *            of {@link Opcodes#ASM4}.
      */
     public FieldVisitor(final int api) {
@@ -64,11 +63,9 @@ public abstract class FieldVisitor {
     /**
      * Constructs a new {@link FieldVisitor}.
      *
-     * @param api
-     *            the ASM API version implemented by this visitor. Must be one
+     * @param api the ASM API version implemented by this visitor. Must be one
      *            of {@link Opcodes#ASM4}.
-     * @param fv
-     *            the field visitor to which this visitor must delegate method
+     * @param fv  the field visitor to which this visitor must delegate method
      *            calls. May be null.
      */
     public FieldVisitor(final int api, final FieldVisitor fv) {
@@ -82,12 +79,10 @@ public abstract class FieldVisitor {
     /**
      * Visits an annotation of the field.
      *
-     * @param desc
-     *            the class descriptor of the annotation class.
-     * @param visible
-     *            <tt>true</tt> if the annotation is visible at runtime.
+     * @param desc    the class descriptor of the annotation class.
+     * @param visible <tt>true</tt> if the annotation is visible at runtime.
      * @return a visitor to visit the annotation values, or <tt>null</tt> if
-     *         this visitor is not interested in visiting this annotation.
+     * this visitor is not interested in visiting this annotation.
      */
     public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
         if (fv != null) {
@@ -99,8 +94,7 @@ public abstract class FieldVisitor {
     /**
      * Visits a non standard attribute of the field.
      *
-     * @param attr
-     *            an attribute.
+     * @param attr an attribute.
      */
     public void visitAttribute(Attribute attr) {
         if (fv != null) {

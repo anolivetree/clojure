@@ -27,7 +27,7 @@ public class ExceptionInfo extends RuntimeException implements IExceptionInfo {
         super(s, throwable);
         if (data != null) {
             this.data = data;
-        }  else {
+        } else {
             throw new IllegalArgumentException("Additional data must be non-nil.");
         }
     }

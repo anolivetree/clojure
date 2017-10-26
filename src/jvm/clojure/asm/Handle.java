@@ -66,23 +66,19 @@ public final class Handle {
     /**
      * Constructs a new field or method handle.
      *
-     * @param tag
-     *            the kind of field or method designated by this Handle. Must be
-     *            {@link Opcodes#H_GETFIELD}, {@link Opcodes#H_GETSTATIC},
-     *            {@link Opcodes#H_PUTFIELD}, {@link Opcodes#H_PUTSTATIC},
-     *            {@link Opcodes#H_INVOKEVIRTUAL},
-     *            {@link Opcodes#H_INVOKESTATIC},
-     *            {@link Opcodes#H_INVOKESPECIAL},
-     *            {@link Opcodes#H_NEWINVOKESPECIAL} or
-     *            {@link Opcodes#H_INVOKEINTERFACE}.
-     * @param owner
-     *            the internal name of the field or method designed by this
-     *            handle.
-     * @param name
-     *            the name of the field or method designated by this handle.
-     * @param desc
-     *            the descriptor of the field or method designated by this
-     *            handle.
+     * @param tag   the kind of field or method designated by this Handle. Must be
+     *              {@link Opcodes#H_GETFIELD}, {@link Opcodes#H_GETSTATIC},
+     *              {@link Opcodes#H_PUTFIELD}, {@link Opcodes#H_PUTSTATIC},
+     *              {@link Opcodes#H_INVOKEVIRTUAL},
+     *              {@link Opcodes#H_INVOKESTATIC},
+     *              {@link Opcodes#H_INVOKESPECIAL},
+     *              {@link Opcodes#H_NEWINVOKESPECIAL} or
+     *              {@link Opcodes#H_INVOKEINTERFACE}.
+     * @param owner the internal name of the field or method designed by this
+     *              handle.
+     * @param name  the name of the field or method designated by this handle.
+     * @param desc  the descriptor of the field or method designated by this
+     *              handle.
      */
     public Handle(int tag, String owner, String name, String desc) {
         this.tag = tag;
@@ -95,11 +91,11 @@ public final class Handle {
      * Returns the kind of field or method designated by this handle.
      *
      * @return {@link Opcodes#H_GETFIELD}, {@link Opcodes#H_GETSTATIC},
-     *         {@link Opcodes#H_PUTFIELD}, {@link Opcodes#H_PUTSTATIC},
-     *         {@link Opcodes#H_INVOKEVIRTUAL}, {@link Opcodes#H_INVOKESTATIC},
-     *         {@link Opcodes#H_INVOKESPECIAL},
-     *         {@link Opcodes#H_NEWINVOKESPECIAL} or
-     *         {@link Opcodes#H_INVOKEINTERFACE}.
+     * {@link Opcodes#H_PUTFIELD}, {@link Opcodes#H_PUTSTATIC},
+     * {@link Opcodes#H_INVOKEVIRTUAL}, {@link Opcodes#H_INVOKESTATIC},
+     * {@link Opcodes#H_INVOKESPECIAL},
+     * {@link Opcodes#H_NEWINVOKESPECIAL} or
+     * {@link Opcodes#H_INVOKEINTERFACE}.
      */
     public int getTag() {
         return tag;
@@ -153,11 +149,11 @@ public final class Handle {
     /**
      * Returns the textual representation of this handle. The textual
      * representation is:
-     *
+     * <p>
      * <pre>
      * owner '.' name desc ' ' '(' tag ')'
      * </pre>
-     *
+     * <p>
      * . As this format is unambiguous, it can be parsed if necessary.
      */
     @Override
